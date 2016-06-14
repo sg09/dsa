@@ -71,21 +71,21 @@ System.out.print(tmp.data+“->”);
 
        }
 
-       Node current, prev, next;
+       Node current, before, after;
 
        current = head;
 
-       prev = null;
+       before = null;
 
        while (current != null) {
 
-           next = current.next;
+           after = current.next;
 
-           current.next = prev;
+           current.next = before;
 
-           prev = current;
+           before = current;
 
-           current = next;
+           current = after;
 
        }
 
