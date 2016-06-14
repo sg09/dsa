@@ -1,50 +1,49 @@
 
+public class LinkedListReversal {
 
-public class LinkedListReversal{
+    class Node {
 
-class Node{
+        int data;
 
-int data;
+        Node next;
 
-Node next;
+        Node(int data) {
 
-Node(int data){
+            this.data = data;
 
-this.data =data;
+        }
 
-}
+    }
 
-}
+    Node head = null;
 
-Node head=null;
+    public void insert(int data) {
 
-public void insert(int data){
+        if (head == null) {
 
-if (head==null){
+            Node node = new Node(data);
 
-Node node = new Node(data);
+            head = node;
 
-head=node;
+        }
 
-}
+        else {
 
-else{
+            Node tmp = head;
 
-Node tmp = head;
+            while (tmp.next != null) {
 
-while (tmp.next!=null){
+                tmp = tmp.next;
 
-tmp=tmp.next;
+            }
 
-}
+            Node node = new Node(data);
 
-Node node = new Node(data);
+            tmp.next = node;
 
-tmp.next = node;
+        }
 
-}
-
-}
+    }
 
 public void display(){
 
@@ -94,22 +93,22 @@ System.out.print(tmp.data+“->”);
 
    }
 
-public static void main(String args[]){
+    public static void main(String args[]) {
 
-LinkedListReversal llist = new LinkedListReversal();
+        LinkedListReversal llist = new LinkedListReversal();
 
-       llist.insert(1);
+        llist.insert(1);
 
-       llist.insert(2);
+        llist.insert(2);
 
-       llist.insert(3);
+        llist.insert(3);
 
-       llist.display();
+        llist.display();
 
-       llist.reverseList();
+        llist.reverseList();
 
-       llist.display();
+        llist.display();
 
- }
+    }
 
 }
