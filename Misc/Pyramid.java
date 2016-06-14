@@ -27,5 +27,3 @@ public class Pyramid {
    }
 
 }
-
-    Feb 7 d
